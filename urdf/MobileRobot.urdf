@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MobileRobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0022933 -9.0093E-05 0.096212"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="2.0518"
+        ixy="0.0027302"
+        ixz="-0.024527"
+        iyy="4.8986"
+        iyz="0.00096358"
+        izz="6.285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LF">
+    <inertial>
+      <origin
+        xyz="0 -0.023529 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.90124" />
+      <inertia
+        ixx="0.001539"
+        ixy="-3.0969E-19"
+        ixz="-1.8635E-19"
+        iyy="0.0024855"
+        iyz="-2.8408E-19"
+        izz="0.001539" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_joint"
+    type="revolute">
+    <origin
+      xyz="0.3 0.185 -0.08"
+      rpy="0 -0.038067 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="LF" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RF">
+    <inertial>
+      <origin
+        xyz="-0.2978 0.17502 0.16888"
+        rpy="0 0 0" />
+      <mass
+        value="0.9" />
+      <inertia
+        ixx="2.3183"
+        ixy="4.6989E-05"
+        ixz="-0.025924"
+        iyy="5.3402"
+        iyz="0.0025405"
+        izz="6.7688" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_Joint"
+    type="revolute">
+    <origin
+      xyz="0.3 -0.175 -0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RF" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LB">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 -0.023529 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.90124" />
+      <inertia
+        ixx="0.001539"
+        ixy="-3.1174E-19"
+        ixz="-2.7105E-20"
+        iyy="0.0024855"
+        iyz="-2.5103E-19"
+        izz="0.001539" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/LB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/LB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lb_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.3 0.185 -0.08"
+      rpy="0 -0.17988 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="LB" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RB">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 -0.023529 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.90124" />
+      <inertia
+        ixx="0.001539"
+        ixy="-4.6236E-19"
+        ixz="-3.7876E-35"
+        iyy="0.0024855"
+        iyz="3.4173E-19"
+        izz="0.001539" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/RB.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MobileRobot/meshes/RB.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.3 -0.185 -0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RB" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
